@@ -1,0 +1,216 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+  color: #1f2937;
+  background: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.app__header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.app__header h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.app__header p {
+  margin-top: 0.5rem;
+  color: #4b5563;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+
+.control-input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.6rem;
+  padding: 0.65rem 0.75rem;
+  font-size: 1rem;
+}
+
+.pokemon-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.pokemon-card {
+  position: relative;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.8rem;
+  background: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 150ms ease;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-3px);
+}
+
+.pokemon-card__main {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 1rem 0.8rem;
+}
+
+.pokemon-card h2 {
+  text-transform: capitalize;
+  margin: 0.5rem 0 0.3rem;
+  font-size: 1.05rem;
+}
+
+.pokemon-card__image {
+  width: 100%;
+  max-width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.pokemon-types {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pokemon-types span {
+  text-transform: capitalize;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.45rem;
+  border: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  cursor: pointer;
+  background: #f3f4f6;
+  font-size: 1rem;
+}
+
+.favorite-btn--active {
+  background: #fef9c3;
+  color: #ca8a04;
+}
+
+.pagination {
+  margin: 1.2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  border: 0;
+  background: #2563eb;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.45rem 0.85rem;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.message {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.message--error {
+  color: #dc2626;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.modal {
+  width: min(520px, 100%);
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.modal__close {
+  margin-left: auto;
+  display: block;
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.35rem 0.65rem;
+  cursor: pointer;
+}
+
+.modal__header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.modal__header img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.modal__header h3 {
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.modal__section {
+  margin-top: 0.75rem;
+}
+
+.modal__section ul {
+  margin: 0.4rem 0 0;
+  padding-left: 1.1rem;
+}
+
+@media (min-width: 720px) {
+  .controls {
+    grid-template-columns: 2fr 1fr;
+  }
+}
