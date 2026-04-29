@@ -1,57 +1,96 @@
-# Pokedex Lite
+📘 Pokedex Lite
 
-A responsive Pokemon browser built with React + TypeScript + Vite and powered by [PokeAPI](https://pokeapi.co/).
+🔗 Live Demo: (https://pokedex-lites.netlify.app/)
 
-## Features
+🚀 Overview
 
-- Paginated Pokemon fetching with `limit` + `offset`
-- Responsive card grid with Pokemon name, artwork, and type badges
-- Real-time search by Pokemon name
-- Type filter (Fire, Water, Grass, etc.)
-- Previous/Next pagination controls
-- Favorite toggle persisted with `localStorage`
-- Pokemon details modal with stats, abilities, and types
-- Loading and error state handling for page and modal requests
+Pokedex Lite is a responsive web application that allows users to explore Pokémon data in an intuitive and visually appealing interface.
+The application fetches real-time data from the PokéAPI and provides features such as search, filtering, pagination, and favorites management.
 
-## Tech Stack
+This project was built to demonstrate strong frontend development skills, including clean UI design, efficient state management, and scalable code architecture.
 
-- React 19
-- TypeScript
-- Vite
-- Native Fetch API
+✨ Features
+🔍 Search Pokémon
+Search Pokémon by name with real-time filtering.
+🎯 Filter by Type
+Filter Pokémon based on their types (Fire, Water, Grass, etc.).
+📄 Pagination
+Efficient data loading using pagination instead of fetching all data at once.
+⭐ Favorites System
+Mark/unmark Pokémon as favorites and persist data using localStorage.
+📊 Detailed View
+View detailed Pokémon information including:
+Stats (HP, Attack, Defense)
+Abilities
+Types
+📱 Fully Responsive UI
+Optimized for mobile, tablet, and desktop screens.
+⚡ Loading & Error Handling
+Graceful handling of API loading states and errors.
+🛠️ Tech Stack
+Frontend: React / Next.js
+Language: JavaScript / TypeScript
+Styling: Tailwind CSS / CSS
+API: PokéAPI
+State Management: React Hooks
+Persistence: localStorage
+Deployment: Netlify / Vercel
+📂 Project Structure
+src/
+ ├── components/
+ │   ├── PokemonCard
+ │   ├── SearchBar
+ │   ├── Filter
+ │   ├── Modal
+ │
+ ├── pages/
+ │   └── Home
+ │
+ ├── services/
+ │   └── api.js
+ │
+ ├── hooks/
+ │   └── useFavorites.js
+ │
+ ├── App.js
+ └── main.js
+⚙️ Installation & Setup
 
-## Project Structure
+Clone the repository:
 
-- `src/api` - API layer and PokéAPI helpers
-- `src/components` - Reusable UI components
-- `src/types` - Shared TypeScript interfaces
-- `src/App.tsx` - Main screen state + app orchestration
+git clone https://github.com/your-username/pokedex-lite.git
+cd pokedex-lite
 
-## Local Setup
+Install dependencies:
 
-```bash
 npm install
+
+Run the development server:
+
 npm run dev
-```
+🧠 Key Implementation Details
+Used pagination (limit & offset) to optimize API calls and improve performance.
+Implemented localStorage to persist user favorites across sessions.
+Designed reusable components for better scalability.
+Managed application state efficiently using React hooks.
+Ensured accessibility and responsiveness across all devices.
+⚡ Challenges Faced
+Handling multiple API calls efficiently.
+Managing search + filter + pagination together.
+Maintaining clean UI while handling asynchronous data.
+Persisting and syncing favorites without conflicts.
+🔮 Future Improvements
+Add animations and transitions for better UX
+Implement server-side rendering (SSR)
+Add authentication (OAuth login)
+Improve performance with caching
+📬 Submission Details
+✅ GitHub Repository: https://github.com/sriyagna123/Pokedex-Lite
+✅ Live URL: (https://pokedex-lites.netlify.app/)
+🙌 Acknowledgements
+Data provided by PokéAPI
+Inspired by modern Pokédex applications and UI practices
+⚠️ Disclaimer
 
-Open the local URL shown in terminal (usually `http://localhost:5173`).
-
-## Build
-
-```bash
-npm run build
-npm run preview
-```
-
-## Deployment (Vercel)
-
-1. Push this repository to GitHub.
-2. Import the repo into [Vercel](https://vercel.com/).
-3. Keep defaults (`Build Command: npm run build`, `Output: dist`).
-4. Deploy.
-
-## Implementation Notes
-
-- Data fetching is separated in `src/api/pokeApi.ts`.
-- Component logic is split into `PokemonCard` and `PokemonModal` to keep `App` focused on state management.
-- Favorites are persisted with a single `localStorage` key: `pokedex-lite-favorites`.
+This project is built for educational purposes only.
+All Pokémon-related content belongs to Nintendo, Game Freak, and The Pokémon Company.
